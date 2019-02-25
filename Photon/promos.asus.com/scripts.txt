@@ -1,0 +1,5 @@
+http://promos.asus.com/latin/powercalculator/js/typeahead.bundle.js
+http://promos.asus.com/latin/powercalculator/js/jquery-1.11.3.min.js
+http://promos.asus.com/latin/powercalculator/js/bootstrap.js
+http://promos.asus.com/latin/powercalculator/js/inventario.js
+http://promos.asus.com/latin/powercalculator/js/bootstrap-md.min.js

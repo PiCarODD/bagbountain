@@ -1,0 +1,8 @@
+http://ehr.asus.com/js/jquery.js
+http://ehr.asus.com/js/navbar.js
+http://ehr.asus.com/js/font-https.js
+http://ehr.asus.com/js/flow.js
+http://ehr.asus.com/flow2/jquery.min.js
+http://ehr.asus.com/js/javascripts/bootstrap/dropdown.js
+http://ehr.asus.com/js/javascripts/bootstrap/tab.js
+http://ehr.asus.com/js/javascripts/bootstrap/collapse.js
