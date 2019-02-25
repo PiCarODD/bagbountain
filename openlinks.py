@@ -14,7 +14,7 @@ __________            __________                     __
 
 """
 inp1=raw_input("Enter Target URL for sublist:")
-url1="python ~/Sublist3r/sublist3r.py -d "+inp1+" -o /root/Tools/"+inp1.split('.')[0]+".txt"
+url1="python ~/Sublist3r/sublist3r.py -d "+inp1+" -o "+inp1.split('.')[0]+".txt"
 os.system(url1)
 print "[!]Subdomains ready! Checking valid url of not........"
 domain=""
