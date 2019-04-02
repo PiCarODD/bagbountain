@@ -1,8 +1,8 @@
 # bagbountain
 
-#BagBountain
-#SETUP
+# BagBountain
+# SETUP
 pip install huepy
-#RUN
+# RUN
 python openlinks.py
-#Happy Hunting
+# Happy Hunting
