@@ -37,7 +37,7 @@ with open("./url/"+inp1.split('.')[0]+".txt",'r') as f:
       		url="http://"+url
       	except requests.exceptions.Timeout:
       		slowprint("URL take too long to response skipped!")
- 	slowprint("[!]Fuzzing url...")+url
+ 	slowprint("[!]Fuzzing url..."+url)
  	fuzz="python ./Photon/photon.py -u "+url+" -o ./url"
  	os.system(fuzz)
 slowprint("Done! Thanks for using my script")
