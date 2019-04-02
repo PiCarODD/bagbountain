@@ -1,5 +1,3 @@
-# bagbountain
-
 # BagBountain
 # SETUP
 pip install huepy
