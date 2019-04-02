@@ -1,3 +1,4 @@
+#!/usr/bin/env python2
 import urllib2
 import requests
 import os
@@ -13,25 +14,29 @@ __________            __________                     __
 
 
 """
+def slowprint(s):
+    for c in s :
+        sys.stdout.write(c)
+        sys.stdout.flush()
+        time.sleep(5. / 100)	
 inp1=raw_input("Enter Target URL for sublist:")
-url1="python ./Sublist3r/sublist3r.py -d "+inp1+" -o "+inp1.split('.')[0]+".txt"
+url1="python ./Sublist3r/sublist3r.py -d "+inp1+" -o ./url/"+inp1.split('.')[0]+".txt"
 os.system(url1)
-print "[!]Subdomains ready! Checking valid url of not........"
+slowprint("[!]Subdomains ready! Checking valid url of not........")
 domain=""
 urls=""
-with open(inp1.split('.')[0]+".txt",'r') as f:
-    for url in f.readlines():
-      key=url.split('\n')
-      for i in key:
-      	if i!="":
-      		domain='https://'+i
-		try:
-			r=requests.get(domain)
-			print "[+]Valid url:"+domain
-			print "[!]Fuzzing url..."
-			fuzz="python ./Photon/photon.py -u "+domain
-			os.system(fuzz)
-		except requests.exceptions.ConnectionError:
-			print "[-]Failed:"+domain
-
-			
+with open("./url/"+inp1.split('.')[0]+".txt",'r') as f:
+    f=f.readlines()
+    for i in range(len(f)):
+      	url=f[i].strip('\n')
+      	url="https://"+url
+      	try:
+      		r=requests.get(url,timeout=0.4)
+      	except requests.exceptions.ConnectionError:
+      		url="http://"+url
+      	except requests.exceptions.Timeout:
+      		slowprint("URL take too long to response skipped!")
+ 	slowprint("[!]Fuzzing url...")+url
+ 	fuzz="python ./Photon/photon.py -u "+url+" -o ./url"
+ 	os.system(fuzz)
+slowprint("Done! Thanks for using my script")			
