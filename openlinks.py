@@ -1,9 +1,6 @@
-#!/usr/bin/env python2
 import urllib2
 import requests
 import os
-import sys
-import time
 print """
 
 
@@ -41,4 +38,6 @@ with open("./url/"+inp1.split('.')[0]+".txt",'r') as f:
  	slowprint("[!]Fuzzing url...")+url
  	fuzz="python ./Photon/photon.py -u "+url+" -o ./url"
  	os.system(fuzz)
-slowprint("Done! Thanks for using my script")			
+slowprint("Done! Thanks for using my script")
+
+			
