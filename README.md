@@ -1,4 +1,8 @@
 # bagbountain
 
-<h1>fark!
-stolen and redesign by Me :3</h1>
+#BagBountain
+#SETUP
+pip install huepy
+#RUN
+python openlinks.py
+#Happy Hunting
